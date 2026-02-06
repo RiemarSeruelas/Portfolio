@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: url("castle-wall.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#game-container {
+  background: rgba(255, 245, 230, 0.95); 
+  padding: 25px;
+  border: 4px solid #d4af37; 
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-align: center;
+  max-width: 600px;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #3b2c1a;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #fff6d4;
+}
+
+#board {
+  display: grid;
+  width: 480px;
+  height: 480px;
+  border: 3px solid #3b2c1a;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.white {
+  background: #f0d9b5; 
+}
+
+.black {
+  background: #b58863; 
+  color: white;
+}
+
+.knight {
+  background-color: #d40000 !important;
+  color: white !important;
+  box-shadow: inset 0 0 10px #fff, 0 0 15px #ff4444;
+  border-radius: 6px;
+}
+
+#status {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3b2c1a;
+}
+
+#controls {
+  margin: 10px 0 15px;
+}
+
+#boardSize {
+  padding: 6px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid #3b2c1a;
+  background: #fff6d4;
+}
+
+#resetBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #3b2c1a;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #d4af37;
+  color: #3b2c1a;
+  transition: 0.3s;
+}
+
+#resetBtn:hover {
+  background: #f2cf66;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff6d4;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 4px solid #d4af37;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  animation: popIn 0.3s ease-out;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: #3b2c1a;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #3b2c1a;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #d4af37;
+  color: #3b2c1a;
+  transition: 0.3s;
+}
+
+.popup-content button:hover {
+  background: #f2cf66;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
