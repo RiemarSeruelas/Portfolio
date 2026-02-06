@@ -38,7 +38,7 @@ async function createFolderElement(item) {
   const contents = await fetchRepoContents(item.path);
 
   contents.forEach(child => {
-    if (child.type === "file" && child.name.endsWith(".html")) {
+    if (child.type === "file" && child.name.endsWith(".html")||child.name.endsWith(".pdf")) {
       folderContents.appendChild(createFileElement(child, item.path + "/"));
     }
   });
@@ -56,5 +56,6 @@ async function loadProjects() {
     }
   }
 }
+
 
 loadProjects();
